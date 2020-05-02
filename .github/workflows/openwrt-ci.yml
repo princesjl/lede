@@ -7,11 +7,9 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 #
 
-name: Sun自定义1.0-20200502
+name: Sun'OpenWrt v1.0-20200502
 
 on:
-  schedule:
-    - cron: 0 20 * * *
   push:
     branches: 
       - master
@@ -51,7 +49,7 @@ jobs:
           mkdir openwrt-packages
           cd openwrt-packages
           git clone https://github.com/Lienol/openwrt-package.git
-          git clone https://github.com/vernesong/OpenClash.git          
+          git clone https://github.com/vernesong/OpenClash.git
           
           # sudo mkdir -p -m 777 /mnt/openwrt/bin /mnt/openwrt/build_dir/host /mnt/openwrt/build_dir/hostpkg /mnt/openwrt/dl /mnt/openwrt/feeds /mnt/openwrt/staging_dir
           # ln -s /mnt/openwrt/bin ./bin
